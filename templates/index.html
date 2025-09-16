@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MKBAXÃO - Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>MKBAXÃO Downloader</h1>
+
+    <label>URL do vídeo:</label>
+    <input type="text" id="url" placeholder="Cole a URL aqui">
+
+    <label>Formato:</label>
+    <select id="formato">
+        <option value="mp4">MP4 (Vídeo)</option>
+        <option value="mp3">MP3 (Áudio)</option>
+    </select>
+
+    <label>Qualidade (apenas para vídeo):</label>
+    <select id="qualidade">
+        <option value="auto">Automático</option>
+        <option value="360p">360p</option>
+        <option value="720p">720p</option>
+        <option value="1080p">1080p</option>
+        <option value="4k">4K</option>
+    </select>
+
+    <label>Nome do arquivo:</label>
+    <input type="text" id="nome" placeholder="Ex: meu_video.mp4">
+
+    <button onclick="iniciarDownload()">Baixar</button>
+
+    <div id="status"></div>
+    <div id="link"></div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
